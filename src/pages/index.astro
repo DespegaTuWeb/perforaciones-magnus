@@ -1,0 +1,475 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MAGNUS SAC - Perforación de Pozos de Agua</title>
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant/20 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-24 px-4 md:px-16 max-w-[1280px] w-full mx-auto">
+<div class="flex items-center gap-3 md:gap-4">
+<img alt="MAGNUS SAC Logo" class="h-12 md:h-16 w-auto object-contain" src="/imgs/logo-perforaciones-magnus-peru.png"/>
+<div class="flex flex-col mt-1">
+  <span class="font-headline-md text-2xl md:text-[28px] font-extrabold tracking-tight text-[#024CAA] leading-none">MAGNUS SAC</span>
+  <span class="font-headline-md text-[10px] md:text-[13px] tracking-[0.2em] text-on-surface-variant font-bold mt-1 md:mt-1.5 leading-none uppercase">Perforaciones y Proyectos</span>
+</div>
+</div>
+<nav class="hidden min-[1100px]:flex gap-8 items-center h-full">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200 h-full flex items-center" href="#">Inicio</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200 h-full flex items-center" href="#about">Nosotros</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200 h-full flex items-center" href="#services">Servicios</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200 h-full flex items-center" href="#contact">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden min-[1100px]:flex bg-secondary-container text-on-secondary-container font-label-md text-label-md px-6 py-3 rounded uppercase font-bold hover:-translate-y-0.5 transition-transform duration-250 shadow-[0_4px_20px_rgba(27,43,72,0.05)]" href="#contact">SOLICITAR COTIZACIÓN</a>
+<button id="mobile-menu-btn" aria-label="Abrir menú" class="min-[1100px]:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden min-[1100px]:hidden absolute top-24 left-0 w-full bg-white border-b border-outline-variant/20 shadow-md flex-col px-4 py-4 gap-4">
+  <a class="text-on-surface-variant font-body-md py-2 border-b border-outline-variant/10" href="#" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a>
+  <a class="text-on-surface-variant font-body-md py-2 border-b border-outline-variant/10" href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Nosotros</a>
+  <a class="text-on-surface-variant font-body-md py-2 border-b border-outline-variant/10" href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servicios</a>
+  <a class="text-on-surface-variant font-body-md py-2" href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contacto</a>
+  <a class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-6 py-3 rounded uppercase font-bold text-center mt-2" href="#contact">SOLICITAR COTIZACIÓN</a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center py-20 px-4 md:px-16 bg-primary text-on-primary overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/60 z-10"></div>
+<img alt="A professional technician in safety gear shaking hands with a satisfied female property owner on a rural Peruvian construction site." class="w-full h-full object-cover object-center" src="/imgs/perforacion-pozo-huachipa.webp"/>
+</div>
+<div class="relative z-20 max-w-[1280px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 bg-surface/20 backdrop-blur-sm border border-outline-variant/30 px-4 py-2 rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Especialistas en Proyectos Locales</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary font-bold tracking-tight text-balance">
+                        Perforación de Pozos con Atención Personalizada
+                    </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl text-balance text-white/90">
+                        Asegura el abastecimiento de agua para tu nueva propiedad. Desarrollamos pozos artesanales y tubulares con un enfoque directo y cercano, garantizando independencia hídrica para tu casa de campo o terreno.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-8 py-4 rounded uppercase font-bold text-center hover:-translate-y-0.5 transition-all duration-250 hover:shadow-[0_8px_24px_rgba(252,125,13,0.3)]" href="#contact">
+                            Solicitar Visita Técnica
+                        </a>
+<a class="border-2 border-primary-fixed-dim text-primary-fixed-dim font-label-md text-label-md px-8 py-4 rounded uppercase font-bold text-center hover:bg-primary-fixed-dim/10 hover:-translate-y-0.5 transition-all duration-250" href="#services">
+                            Nuestros Servicios
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="border-b border-outline-variant/20 bg-surface">
+<div class="max-w-[1280px] w-full mx-auto px-4 md:px-16 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center sm:items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="engineering" data-weight="fill" style="font-variation-settings: 'FILL' 1;">engineering</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary font-bold">+15 Años</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Experiencia Comprobada</p>
+</div>
+</div>
+<div class="flex flex-col items-center sm:items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="water_drop" data-weight="fill" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary font-bold">+500</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Pozos Perforados</p>
+</div>
+</div>
+<div class="flex flex-col items-center sm:items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="verified_user" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary font-bold">100%</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Personal Calificado</p>
+</div>
+</div>
+<div class="flex flex-col items-center sm:items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="support_agent" data-weight="fill" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary font-bold">24/7</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Soporte Técnico</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-24 px-4 md:px-16 bg-surface" id="about">
+<div class="max-w-[1280px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary mb-6">Sobre Nosotros</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 text-balance">
+                MAGNUS SAC es una empresa enfocada en brindar atención personalizada para tu proyecto. Nuestro equipo central de 6 especialistas asegura un enfoque práctico y directo en la perforación de pozos de agua y mantenimiento de sistemas.
+            </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">Atención Personalizada</strong>
+<span class="font-body-md text-body-md text-on-surface-variant">Trato directo y cercano para entender las necesidades específicas de tu terreno y ofrecer la mejor solución.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">Seguridad y SCTR</strong>
+<span class="font-body-md text-body-md text-on-surface-variant">Cumplimos con estrictos estándares de seguridad laboral, asegurando a todo nuestro personal con SCTR.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">Enfoque Práctico</strong>
+<span class="font-body-md text-body-md text-on-surface-variant">Experiencia en el campo con un equipo unido y dedicado a garantizar la máxima calidad en cada obra local.</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative h-[500px] rounded-xl overflow-hidden shadow-lg border border-outline-variant/20">
+<img alt="Portrait of a professional team of 6 hydraulic technicians in Peru posing in front of a water well project." class="absolute inset-0 w-full h-full object-cover" src="/imgs/pozos-peru-lima.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Soluciones Casas de Campo Section -->
+<section class="py-24 px-4 md:px-16 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="max-w-[1280px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative h-[500px] rounded-xl overflow-hidden shadow-lg border border-outline-variant/20">
+<img alt="Modern country house under construction with a clean water well area featuring concrete rings" class="absolute inset-0 w-full h-full object-cover" src="/imgs/pozo-casa-campo-tubular.webp"/>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary mb-6">Soluciones para Casas de Campo y Terrenos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 text-balance">
+                Contar con una fuente de agua propia es el primer paso para desarrollar tu casa de campo o terreno agrícola. Diseñamos e implementamos pozos artesanales estéticos y funcionales, integrados perfectamente con el entorno natural de tu nueva propiedad.
+            </p>
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">Beneficios de tu propio pozo:</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Independencia total de redes públicas.</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">nature</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Agua constante para riego y uso residencial.</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Aumento del valor comercial de tu terreno.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-4 md:px-16 bg-surface-container-low border-y border-outline-variant/20" id="services">
+<div class="max-w-[1280px] w-full mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary mb-4">Nuestros Servicios</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Soluciones hidráulicas integrales para necesidades residenciales de alto nivel, agrícolas e industriales.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1: Pozos Artesanales (Moved to first) -->
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300">
+<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="waves">waves</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">Pozos Artesanales</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Construcción de pozos tradicionales utilizando anillos de concreto reforzado. Excavación manual o mecanizada ideal para entornos rurales y residenciales de campo, asegurando una fuente de agua accesible y duradera.
+                </p>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300">
+<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">Perforación Tubular</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Perforación de pozos profundos utilizando maquinaria especializada e instalación de tuberías de revestimiento de alta resistencia para uso intensivo.
+                </p>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300">
+<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="build">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">Mantenimiento Técnico</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Limpieza, rehabilitación y remoción de sedimentos para optimizar el rendimiento y prolongar la vida útil de su pozo.
+                </p>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300">
+<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="electric_bolt">electric_bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">Montaje de Electrobombas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Instalación profesional, maniobras de izaje seguras y configuración de tableros eléctricos de control para todo tipo de proyectos.
+                </p>
+</div>
+<!-- Service 5 -->
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow duration-300 lg:col-span-2">
+<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="plumbing">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">Inspección y Diagnóstico</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Pruebas de rendimiento, informes técnicos detallados y control de verticalidad con equipos de precisión para asegurar la viabilidad y salud de su fuente de agua.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Artesanía Técnica / Proceso Artesanal Section -->
+<section class="py-24 px-4 md:px-16 bg-surface">
+<div class="max-w-[1280px] w-full mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary mb-4">Artesanía Técnica y Calidad</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Nos enorgullecemos de nuestra calidad artesanal. Cada anillo de concreto y cada etapa de la excavación se realiza con el máximo cuidado manual y precisión por nuestros especialistas en proyectos locales.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="rounded-xl overflow-hidden shadow-sm h-96">
+<img alt="Close-up shot of a team of workers manually assembling concrete rings for an artisan water well." class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="/imgs/pozo-artesanal-anillado.webp"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-sm h-96">
+<img alt="Panoramic view of a large rural terrain or agricultural lot being prepared for a project" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="/imgs/perforacion-de-pozos.webp"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-4 md:px-16 bg-surface-container-low border-t border-outline-variant/20" id="contact">
+<div class="max-w-[1280px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary mb-6">Contáctenos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                Estamos listos para asesorarlo en su próximo proyecto. Solicite una visita técnica o una cotización sin compromiso.
+            </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-1">Ubicación</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Huachipa, Lima - Perú</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="phone">phone</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-1">Teléfono</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">+51 960 506 850</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-1">Correo Electrónico</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">karmagnus1@gmail.com<br/>ryperzperz@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-1">RUC</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">20610246967</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider mb-1">Gerencia</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Carlo Magno Pérez Quijano</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary font-bold mb-6">Solicitar Cotización</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="name">Nombre Completo / Empresa</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded px-4 py-3 font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="name" placeholder="Su nombre" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="phone">Teléfono</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded px-4 py-3 font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phone" placeholder="Su teléfono" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="email">Correo</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded px-4 py-3 font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="email" placeholder="Su correo" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="service">Servicio de Interés</label>
+<select class="w-full bg-surface border border-outline-variant/50 rounded px-4 py-3 font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="service">
+<option>Pozos Artesanales</option>
+<option>Perforación Tubular</option>
+<option>Mantenimiento Técnico</option>
+<option>Montaje de Electrobombas</option>
+<option>Inspección y Diagnóstico</option>
+<option>Otro</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="message">Mensaje (Opcional)</label>
+<textarea class="w-full bg-surface border border-outline-variant/50 rounded px-4 py-3 font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="message" placeholder="Detalles de su proyecto..." rows="4"></textarea>
+</div>
+<button id="submit-btn" class="w-full bg-secondary-container text-on-secondary-container font-label-md text-label-md px-8 py-4 rounded uppercase font-bold text-center hover:-translate-y-0.5 transition-all duration-250 hover:shadow-[0_8px_24px_rgba(252,125,13,0.3)] mt-4" type="button">
+                    Enviar Solicitud
+                </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary border-t border-primary w-full py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-[1280px] w-full mx-auto px-4 md:px-16">
+<div class="flex flex-col gap-6 md:col-span-1">
+<div class="flex items-center gap-3">
+<img alt="MAGNUS SAC Logo" class="h-10 w-10 object-contain" src="/imgs/logo-perforaciones-magnus-peru-footer.png"/>
+<span class="font-headline-md text-headline-md text-white font-bold tracking-tighter">MAGNUS SAC</span>
+</div>
+<p class="font-body-md text-body-md text-white/80">
+                        Expertos en ingeniería hidráulica y perforación de pozos. Soluciones técnicas confiables para proyectos residenciales, agrícolas e industriales.
+                    </p>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-label-md text-label-md text-white uppercase font-bold tracking-wider">Servicios</h3>
+<ul class="flex flex-col gap-3">
+<li class=""><a class="font-body-md text-body-md text-white/80 hover:text-white transition-colors duration-200" href="#services">Pozos Artesanales</a></li>
+<li class=""><a class="font-body-md text-body-md text-white/80 hover:text-white transition-colors duration-200" href="#services">Perforación Tubular</a></li>
+<li class=""><a class="font-body-md text-body-md text-white/80 hover:text-white transition-colors duration-200" href="#services">Mantenimiento</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-label-md text-label-md text-white uppercase font-bold tracking-wider">Compañía</h3>
+<ul class="flex flex-col gap-3">
+<li class=""><a class="font-body-md text-body-md text-white/80 hover:text-white transition-colors duration-200" href="#about">Nosotros</a></li>
+<li class=""><a class="font-body-md text-body-md text-white/80 hover:text-white transition-colors duration-200" href="#">Estándares de Seguridad</a></li>
+<li class=""><a class="font-body-md text-body-md text-white/80 hover:text-white transition-colors duration-200" href="#contact">Contáctenos</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-label-md text-label-md text-white uppercase font-bold tracking-wider">Contacto</h3>
+<ul class="flex flex-col gap-3 font-body-md text-body-md text-white/80">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white" data-icon="location_on">location_on</span>
+                            Huachipa, Lima - Perú
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white" data-icon="phone">phone</span>
+                            +51 960 506 850
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white" data-icon="mail">mail</span>
+                            karmagnus1@gmail.com
+                        </li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-white/60">© 2026 MAGNUS SAC. Huachipa, Peru. Perforaciones y Proyectos.</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- WhatsApp Floating CTA -->
+<a aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform duration-250 flex items-center justify-center group" href="https://wa.me/51960506850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-3xl" data-icon="chat" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="absolute right-full mr-4 bg-surface text-on-surface px-3 py-2 rounded shadow-sm text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none border border-outline-variant/20">
+            Respuesta Rápida
+        </span>
+</a>
+
+<script>
+  // Simple mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  }
+
+  // WhatsApp Form Generation
+  const submitBtn = document.getElementById('submit-btn');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', () => {
+      const name = document.getElementById('name')?.value.trim() || '';
+      const phone = document.getElementById('phone')?.value.trim() || '';
+      const email = document.getElementById('email')?.value.trim() || '';
+      const service = document.getElementById('service')?.value || '';
+      const message = document.getElementById('message')?.value.trim() || '';
+
+      if(!name) {
+        alert("Por favor, ingrese su nombre o empresa para continuar.");
+        return;
+      }
+
+      const text = `*NUEVA SOLICITUD WEB*
+
+*Nombre/Empresa:* ${name}
+*Teléfono:* ${phone}
+*Correo:* ${email}
+*Servicio de interés:* ${service}
+*Mensaje:* ${message}`;
+
+      const encodedText = encodeURIComponent(text);
+      // Número de MAGNUS SAC
+      const waUrl = `https://wa.me/51960506850?text=${encodedText}`;
+      window.open(waUrl, '_blank');
+    });
+  }
+</script>
+
+</body>
+</html>
